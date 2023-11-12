@@ -63,8 +63,7 @@ p {
   color: rgba(66, 6, 41, 0.5);
 }
 
-p .weather-data {
-  font-weight: bold;
+p strong {
   color: #222658;
 }
 
@@ -87,7 +86,7 @@ p .weather-data {
   right: 5px;
 }
 
-.current-temperature-data {
+.current-temperature-value {
   font-size: 80px;
   font-weight: 700;
   color: #222658;
@@ -98,6 +97,7 @@ p .weather-data {
   position: relative;
   top: -35px;
   right: 6px;
+  color: #222658;
 }
 
 footer {
