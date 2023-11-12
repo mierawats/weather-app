@@ -106,6 +106,7 @@ footer {
 }
 
 footer a {
+  font-weight: bold;
   color: #222658;
   text-decoration: none;
 }
