@@ -96,6 +96,26 @@ header {
   right: 0px;
 }
 
+.weather-forecast {
+  text-align: center;
+  font-weight: 500;
+}
+
+.weather-forecast-day {
+  font-size: 18px;
+  opacity: 0.5;
+  color: #321313;
+}
+
+.weather-forecast-temperatures {
+  font-size: 16px;
+  color: #321313;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
 footer {
   padding: 30px 0 0 0;
   font-size: 14px;
@@ -108,4 +128,9 @@ footer a {
   font-weight: bold;
   text-decoration: none;
   color: #321313;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ff6d3f;
 }
