@@ -103,7 +103,6 @@ header {
 }
 
 .weather-forecast-date,
-.weather-forecast-icon,
 .weather-forecast-temperatures {
   margin: 20px;
 }
@@ -122,6 +121,8 @@ header {
 }
 
 .weather-forecast-icon {
+  display: block;
+  margin: 0 auto;
   font-size: 40px;
 }
 
