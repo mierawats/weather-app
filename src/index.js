@@ -1,30 +1,36 @@
-function search(event) {
-  event.preventDefault();
-  let searchInputElement = document.querySelector("#search-input");
-  let city = searchInputElement.value;
-
+function search(city) {
   let apiKey = "cf804oa134f4b8cta94fba1330643173";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayTemperature);
 }
 
+function handleSearch(event) {
+  event.preventDefault();
+  let searchInputElement = document.querySelector("#search-input");
+
+  search(searchInputElement.value);
+}
+
 function displayTemperature(response) {
   let cityDisplay = document.querySelector("#current-city");
   cityDisplay.innerHTML = response.data.city;
+
+  let conditionDisplay = document.querySelector("#condition-description");
+  conditionDisplay.innerHTML = response.data.condition.description;
+
+  let humidityDisplay = document.querySelector("#temperature-humidity");
+  humidityDisplay.innerHTML = response.data.temperature.humidity;
+
+  let windSpeedDisplay = document.querySelector("#wind-speed");
+  windSpeedDisplay.innerHTML = response.data.wind.speed;
 
   let temperatureDisplay = document.querySelector(".current-temperature-value");
   let temperature = Math.round(response.data.temperature.current);
   temperatureDisplay.innerHTML = temperature;
 
-  let conditionDisplay = document.querySelector(".condition-description");
-  conditionDisplay.innerHTML = response.data.condition.description;
-
-  let humidityDisplay = document.querySelector(".temperature-humidity");
-  humidityDisplay.innerHTML = response.data.temperature.humidity;
-
-  let windSpeedDisplay = document.querySelector(".wind-speed");
-  windSpeedDisplay.innerHTML = response.data.wind.speed;
+  let iconDisplay = document.querySelector(".current-temperature-icon");
+  iconDisplay.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
 }
 
 function formatDate(date) {
@@ -55,7 +61,9 @@ function formatDate(date) {
 }
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSearch);
+
+search("Paris");
 
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
