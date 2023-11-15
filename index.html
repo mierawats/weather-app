@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/index.css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <title>My Weather Application</title>
+    <title>Vanilla Weather Search</title>
   </head>
   <body>
-    <div class="page">
+    <div class="weather-app-page">
       <header>
-        <form id="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a City"
@@ -24,43 +24,53 @@
             class="search-input"
             id="search-input"
           />
-          <input type="submit" value="Search" id="search-button" />
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="search-button"
+          />
         </form>
       </header>
       <main>
         <div class="current-weather">
           <div>
-            <h1 class="current-city" id="current-city">New York</h1>
+            <h1 class="current-city" id="current-city"></h1>
             <p class="current-details">
-              <span id="current-date">Friday 07:35</span>,
-              <span class="condition-description">Slightly cloudy</span>
-              <br />
-              Humidity:
-              <strong><span class="temperature-humidity">87</span>%</strong>,
-              Wind:
-              <strong><span class="wind-speed">7.2</span>mph</strong>
+              <span id="current-date">Tuesday. 13:48</span>,
+              <span id="condition-description">moderate rain</span
+              ><br />Humidity:
+              <strong><span id="temperature-humidity"></span>%</strong>, Wind:
+              <strong><span id="wind-speed"></span>mph</strong>
             </p>
           </div>
           <div class="current-temperature">
-            <span class="current-temperature-icon">☀️</span>
-            <span class="current-temperature-value">20</span>
-            <span class="current-temperature-unit">°C</span>
+            <div class="current-temperature-icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+              />
+            </div>
+            <div class="current-temperature-value"></div>
+            <div class="current-temperature-unit">°C</div>
           </div>
         </div>
       </main>
+      <br />
       <footer>
-        <p>
-          This project was coded by
-          <a href="https://github.com/mierawats" target="_blank">Miera Azmi</a>
-          and is
-          <a href="https://github.com/mierawats/weather-app" target="_blank">
-            on GitHub</a
-          >
-          and
-          <a href="https://www.vercel.com/" target="_blank"
-            >hosted on Vercel.</a
-          >
-        </p>
+        This project was coded by
+        <a href="https://github.com/mierawats" target="_blank">Miera Azmi</a>,
+        is
+        <a
+          href="https://github.com/mierawats/vanilla-weather-search"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a
+          href="https://vanilla-weather-search-project.vercel.app/"
+          target="_blank"
+          >hosted on Vercel</a
+        >
       </footer>
     </div>
     <script src="src/index.js"></script>
