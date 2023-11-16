@@ -96,19 +96,16 @@ header {
   right: 0px;
 }
 
-.weather-forecast,
-.weather-forecast-temperatures {
-  display: flex;
-  justify-content: space-between;
-}
-
 .weather-forecast-date,
 .weather-forecast-temperatures {
   margin: 20px;
 }
 
 .weather-forecast {
-  margin: 10px 12px 10px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
   text-align: center;
   font-weight: 500;
   max-width: 600px;
@@ -127,6 +124,8 @@ header {
 }
 
 .weather-forecast-temperatures {
+  display: flex;
+  justify-content: space-between;
   font-size: 16px;
   color: #321313;
 }
