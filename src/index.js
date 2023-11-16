@@ -77,17 +77,7 @@ function displayForecast(response) {
 }
 
 function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
   let day = date.getDay();
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
 
   let days = [
     "Sunday",
@@ -100,13 +90,32 @@ function formatDate(date) {
   ];
 
   let formattedDay = days[day];
-  return `${formattedDay} ${hours}:${minutes}`;
+  return `${formattedDay}`;
 }
 
-let currentDateELement = document.querySelector("#current-date");
+function formatTime(time) {
+  let minutes = time.getMinutes();
+  let hours = time.getHours();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+
+    return `${hours}:${minutes}`;
+  }
+}
+
+let currentDateELement = document.querySelector("#current-date .day");
+let currentTimeELement = document.querySelector("#current-date .time");
+
 let currentDate = new Date();
+let currentTime = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+currentTimeELement.innerHTML = formatTime(currentTime);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearch);

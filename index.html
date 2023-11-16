@@ -19,7 +19,7 @@
   </head>
   <body>
     <header>
-      <span class="material-symbols-outlined" id="dots"> more_horiz </span>
+      <div class="material-symbols-outlined" id="dots">more_horiz</div>
       <h1>
         <span class="material-symbols-outlined"> location_on </span>
         <span class="current-city" id="current-city"></span>
@@ -39,10 +39,10 @@
           id="search-button"
         />
       </form>
-      <span class="material-symbols-outlined" id="dots"> more_horiz </span>
+      <div class="material-symbols-outlined" id="dots">more_horiz</div>
     </header>
-    <div class="weather-app-page">
-      <main>
+    <main>
+      <div class="weather-app-page">
         <div class="current-day-time" id="current-date">
           <span class="day">Tuesday</span>
           <span class="time">13:48</span>
@@ -66,24 +66,23 @@
             <div class="current-temperature-unit">°C</div>
           </div>
         </div>
-      </main>
-    </div>
-    <div class="weather-forecast-page">
-      <div class="weather-forecast" id="forecast"></div>
-      <br />
-      <footer>
-        This project was coded by
-        <a href="https://github.com/mierawats" target="_blank">Miera Azmi</a>,
-        is
-        <a
-          href="https://github.com/mierawats/vanilla-weather-search"
-          target="_blank"
-          >open-sourced on GitHub</a
-        >
-        and
-        <a href="#" target="_blank">hosted on Vercel</a>
-      </footer>
-    </div>
+      </div>
+      <div class="weather-forecast-page">
+        <div class="weather-forecast" id="forecast"></div>
+        <br />
+      </div>
+    </main>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/mierawats" target="_blank">Miera Azmi</a>, is
+      <a
+        href="https://github.com/mierawats/vanilla-weather-search"
+        target="_blank"
+        >open-sourced on GitHub</a
+      >
+      and
+      <a href="#" target="_blank">hosted on Vercel</a>
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
