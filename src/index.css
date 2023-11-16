@@ -3,7 +3,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.weather-app-page {
+.weather-app-page,
+.weather-forecast-page {
   margin: 60px auto;
   padding: 30px;
   max-width: 600px;
@@ -14,33 +15,47 @@ body {
 }
 
 header {
-  border-bottom: 1px solid rgba(50, 19, 19, 0.03);
-  padding: 0 0 30px 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#dots {
+  color: rgb(234, 4, 4);
+  font-size: 100px;
+}
+
+.material-symbols-outlined {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
 }
 
 .search-form {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 .search-input {
-  width: 80%;
-  padding: 20px;
-  font-size: 18px;
+  width: 800px;
+  padding: 0 35px;
+  font-size: 16px;
   background: #f9f7fe;
   border: none;
-  border-radius: 6px;
+  border-radius: 35px;
 }
 
 .search-button {
   margin-left: 10px;
-  padding: 20px;
-  font-size: 18px;
+  padding: 10px 20px;
+  font-size: 16px;
   color: #feeeff;
   background: #321313;
   border: none;
-  border-radius: 6px;
+  border-radius: 35px;
   cursor: pointer;
 }
 
@@ -67,6 +82,11 @@ header {
 
 .current-details strong {
   color: #ff6d3f;
+}
+
+.current-day-time {
+  display: flex;
+  justify-content: space-around;
 }
 
 .current-temperature {

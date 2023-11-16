@@ -9,35 +9,47 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <link rel="stylesheet" href="src/index.css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>PLUS Weather Forecast</title>
   </head>
   <body>
+    <header>
+      <span class="material-symbols-outlined" id="dots"> more_horiz </span>
+      <h1>
+        <span class="material-symbols-outlined"> location_on </span>
+        <span class="current-city" id="current-city"></span>
+      </h1>
+      <form class="search-form" id="search-form">
+        <input
+          type="search"
+          placeholder=" ▶  Enter a City"
+          required
+          class="search-input"
+          id="search-input"
+        />
+        <input
+          type="submit"
+          value="Search"
+          class="search-button"
+          id="search-button"
+        />
+      </form>
+      <span class="material-symbols-outlined" id="dots"> more_horiz </span>
+    </header>
     <div class="weather-app-page">
-      <header>
-        <form class="search-form" id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a City"
-            required
-            class="search-input"
-            id="search-input"
-          />
-          <input
-            type="submit"
-            value="Search"
-            class="search-button"
-            id="search-button"
-          />
-        </form>
-      </header>
       <main>
+        <div class="current-day-time" id="current-date">
+          <span class="day">Tuesday</span>
+          <span class="time">13:48</span>
+        </div>
         <div class="current-weather">
           <div>
-            <h1 class="current-city" id="current-city"></h1>
             <p class="current-details">
-              <span id="current-date">Tuesday. 13:48</span>,
               <span id="condition-description">moderate rain</span
               ><br />Humidity:
               <strong><span id="temperature-humidity"></span>%</strong>, Wind:
@@ -54,8 +66,10 @@
             <div class="current-temperature-unit">°C</div>
           </div>
         </div>
-        <div class="weather-forecast" id="forecast"></div>
       </main>
+    </div>
+    <div class="weather-forecast-page">
+      <div class="weather-forecast" id="forecast"></div>
       <br />
       <footer>
         This project was coded by
