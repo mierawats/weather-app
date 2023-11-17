@@ -103,9 +103,8 @@ function formatTime(time) {
 
   if (hours < 10) {
     hours = `0${hours}`;
-
-    return `${hours}:${minutes}`;
   }
+  return `${hours}:${minutes}`;
 }
 
 let currentDateELement = document.querySelector("#current-date .day");
