@@ -12,8 +12,24 @@ function displayTemperature(response) {
   windSpeedDisplay.innerHTML = response.data.wind.speed;
 
   let temperatureDisplay = document.querySelector(".current-temperature-value");
-  let temperature = Math.round(response.data.temperature.current);
-  temperatureDisplay.innerHTML = temperature;
+  let temperatureCelsius = Math.round(response.data.temperature.current);
+  temperatureDisplay.innerHTML = temperatureCelsius;
+
+  let temperatureUnitCelsius = document.querySelector("#celcius");
+  let temperatureUnitFahrenheit = document.querySelector("#fahrenheit");
+
+  function displayCelsius() {
+    let temperatureCelsius = Math.round(response.data.temperature.current);
+    temperatureDisplay.innerHTML = temperatureCelsius;
+  }
+
+  function displayFahrenheit() {
+    let temperatureFahrenheit = Math.round((temperatureCelsius * 9) / 5 + 32);
+    temperatureDisplay.innerHTML = temperatureFahrenheit;
+  }
+
+  temperatureUnitCelsius.addEventListener("click", displayCelsius);
+  temperatureUnitFahrenheit.addEventListener("click", displayFahrenheit);
 
   let iconDisplay = document.querySelector(".current-temperature-icon");
   iconDisplay.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
