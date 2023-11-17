@@ -9,6 +9,12 @@ body {
   max-width: 2000px;
 }
 
+main {
+  display: block;
+  position: relative;
+  bottom: 60px;
+}
+
 .middle-layout {
   display: flex;
   justify-content: space-between;
@@ -26,6 +32,7 @@ body {
 }
 
 .weather-app-page {
+  max-height: 525px;
   padding: 30px;
   background: #f9f5f0;
   border: none;
@@ -140,10 +147,17 @@ h1 {
 }
 
 .current-details {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 25px;
-  color: rgba(39, 33, 66, 0.4);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 40px 30px 40px;
+  font-size: 25px;
+  font-weight: 450;
+  line-height: 45px;
+  color: rgba(39, 33, 66, 0.5);
+  position: relative;
+  bottom: 80px;
+  text-align: center;
+  border-bottom: 1px solid rgba(50, 19, 19, 0.1);
 }
 
 .current-details strong {
@@ -155,20 +169,22 @@ h1 {
   justify-content: space-between;
   border-bottom: 1px solid black;
   padding-bottom: 30px;
+  align-items: center;
 }
 
 .current-day-time .day {
   font-family: "Space Mono", monospace;
+  font-size: 45px;
 }
 
 .current-day-time .time {
   font-family: "VT323", monospace;
+  font-size: 55px;
 }
 .current-day-time .day,
 .current-day-time .time {
   color: red;
   font-weight: bold;
-  font-size: 45px;
   margin: 10px 15px 10px 15px;
 }
 
@@ -214,6 +230,8 @@ h1 {
 }
 
 footer {
+  position: relative;
+  bottom: 55px;
   padding: 30px 0 0 0;
   font-size: 14px;
   text-align: center;
@@ -278,10 +296,8 @@ footer a:hover {
 
 /* For larger screens */
 @media screen and (min-width: 769px) {
-  .current-details {
-    font-size: 16px; /* Default or larger font size for larger screens */
-    /* Add other responsive styles as needed */
-  }
+  /* Default or larger font size for larger screens */
+  /* Add other responsive styles as needed */
 
   .current-temperature-value {
     font-size: 250px; /* Default or larger font size for larger screens */
