@@ -19,57 +19,61 @@
   </head>
   <body>
     <header>
-      <div class="material-symbols-outlined" id="dots">more_horiz</div>
-      <h1>
-        <span class="material-symbols-outlined"> location_on </span>
-        <span class="current-city" id="current-city"></span>
-      </h1>
-      <form class="search-form" id="search-form">
-        <input
-          type="search"
-          placeholder=" ▶  Enter a City"
-          required
-          class="search-input"
-          id="search-input"
-        />
-        <input
-          type="submit"
-          value="Search"
-          class="search-button"
-          id="search-button"
-        />
-      </form>
-      <div class="material-symbols-outlined" id="dots">more_horiz</div>
+      <div class="first-layout">
+        <div class="material-symbols-outlined" id="dots-left">more_horiz</div>
+        <h1>
+          <span class="material-symbols-outlined"> location_on </span>
+          <span class="current-city" id="current-city"></span>
+        </h1>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder=" ▶  Enter a City"
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="search-button"
+          />
+        </form>
+        <div class="material-symbols-outlined" id="dots-right">more_horiz</div>
+      </div>
     </header>
     <main>
-      <div class="weather-app-page">
-        <div class="current-day-time" id="current-date">
-          <span class="day">Tuesday</span>
-          <span class="time">13:48</span>
-        </div>
-        <div class="current-weather">
-          <div>
-            <p class="current-details">
-              <span id="condition-description">moderate rain</span
-              ><br />Humidity:
-              <strong><span id="temperature-humidity"></span>%</strong>, Wind:
-              <strong><span id="wind-speed"></span>mph</strong>
-            </p>
+      <div class="middle-layout">
+        <div class="weather-app-page">
+          <div class="current-day-time" id="current-date">
+            <span class="day">Tuesday</span>
+            <span class="time">13:48</span>
           </div>
-          <div class="current-temperature">
-            <div class="current-temperature-icon">
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
-              />
+          <div class="current-weather">
+            <div>
+              <p class="current-details">
+                <span id="condition-description">moderate rain</span
+                ><br />Humidity:
+                <strong><span id="temperature-humidity"></span>%</strong>, Wind:
+                <strong><span id="wind-speed"></span>mph</strong>
+              </p>
             </div>
-            <div class="current-temperature-value"></div>
-            <div class="current-temperature-unit">°C</div>
+            <div class="current-temperature">
+              <div class="current-temperature-icon">
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                />
+              </div>
+              <div class="current-temperature-value"></div>
+              <div class="current-temperature-unit">°C</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="weather-forecast-page">
-        <div class="weather-forecast" id="forecast"></div>
-        <br />
+        <div class="weather-forecast-page">
+          <div class="weather-forecast" id="forecast"></div>
+          <br />
+        </div>
       </div>
     </main>
     <footer>
