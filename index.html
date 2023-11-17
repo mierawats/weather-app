@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap"
       rel="stylesheet"
     />
     <link
@@ -47,38 +51,40 @@
         </div>
       </header>
       <main>
-        <div class="middle-layout">
-          <div class="weather-app-page">
-            <div class="current-day-time" id="current-date">
-              <span class="day">Tuesday</span>
-              <span class="time">13:48</span>
-            </div>
-            <div class="current-weather">
-              <div>
+        <ul class="middle-layout">
+          <li>
+            <div class="weather-app-page">
+              <div class="current-day-time" id="current-date">
+                <span class="day">Tuesday</span>
+                <span class="time">13:48</span>
+              </div>
+              <div class="current-weather">
+                <div class="current-temperature">
+                  <div class="current-temperature-value"></div>
+                  <div class="current-temperature-icon">
+                    <img
+                      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                    />
+                  </div>
+                </div>
+                <div class="current-temperature-unit">
+                  <span id="celcius">°C</span> | <span id="fahrenheit">°F</span>
+                </div>
                 <p class="current-details">
-                  <span id="condition-description">moderate rain</span
-                  ><br />Humidity:
+                  <span id="condition-description">moderate rain</span><br />
+                  Humidity:
                   <strong><span id="temperature-humidity"></span>%</strong>,
-                  Wind:
-                  <strong><span id="wind-speed"></span>mph</strong>
+                  Wind: <strong><span id="wind-speed"></span>mph</strong>
                 </p>
               </div>
-              <div class="current-temperature">
-                <div class="current-temperature-icon">
-                  <img
-                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
-                  />
-                </div>
-                <div class="current-temperature-value"></div>
-                <div class="current-temperature-unit">°C</div>
-              </div>
             </div>
-          </div>
-          <div class="weather-forecast-page">
-            <div class="weather-forecast" id="forecast"></div>
-            <br />
-          </div>
-        </div>
+          </li>
+          <li>
+            <div class="weather-forecast-page">
+              <div class="weather-forecast" id="forecast"></div>
+            </div>
+          </li>
+        </ul>
       </main>
       <footer>
         This project was coded by
