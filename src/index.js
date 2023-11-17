@@ -13,7 +13,12 @@ function displayTemperature(response) {
 
   let temperatureDisplay = document.querySelector(".current-temperature-value");
   let temperatureCelsius = Math.round(response.data.temperature.current);
-  temperatureDisplay.innerHTML = temperatureCelsius;
+
+  if (temperatureCelsius < 10) {
+    temperatureDisplay.innerHTML = `0${temperatureCelsius}`;
+  } else {
+    temperatureDisplay.innerHTML = temperatureCelsius;
+  }
 
   let temperatureUnitCelsius = document.querySelector("#celcius");
   let temperatureUnitFahrenheit = document.querySelector("#fahrenheit");
@@ -53,7 +58,15 @@ function handleSearch(event) {
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   return days[date.getDay()];
 }
@@ -70,24 +83,30 @@ function displayForecast(response) {
 
   response.data.daily.forEach(function (day, index) {
     if (index > 0 && index < 6) {
-      forecastHtml =
-        forecastHtml +
-        `<div class="weather-forecast-day">
-        <div class="weather-forecast-date">${formatDay(day.time)}</div>
-        <div>
-        <img src = "${day.condition.icon_url}" class="weather-forecast-icon"/>
-        </div>
+      let maxTemperature = Math.round(day.temperature.maximum);
+      let minTemperature = Math.round(day.temperature.minimum);
+
+      // Adding leading zero for temperatures less than 10
+      if (maxTemperature < 10) {
+        maxTemperature = `0${maxTemperature}`;
+      }
+      if (minTemperature < 10) {
+        minTemperature = `0${minTemperature}`;
+      }
+
+      forecastHtml += `<div class="weather-forecast-day">
+          <span class="weather-forecast-date">${formatDay(day.time)}</span>
           <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature-max">${Math.round(
-            day.temperature.maximum
-          )}°</div>
-          <div class="weather-forecast-temperature-min">${Math.round(
-            day.temperature.minimum
-          )}°</div>
-        </div>
-      </div>`;
+            <span class="weather-forecast-temperature-max">${maxTemperature}°</span>
+            <span class="weather-forecast-temperature-min">${minTemperature}°</span>
+          </div>
+          <span>
+            <img src="${day.condition.icon_url}" class="weather-forecast-icon"/>
+          </span>
+        </div>`;
     }
   });
+
   let forecast = document.querySelector("#forecast");
   forecast.innerHTML = forecastHtml;
 }
