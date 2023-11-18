@@ -17,26 +17,25 @@ body {
 .layout {
   display: block;
   margin: 0 auto;
-  max-width: 2000px;
+  max-width: 104.17%;
   max-height: 950px;
 }
 
 h1 {
   text-align: center;
   position: relative;
-  top: -95px;
+  top: -5.9375rem;
 }
 
 .material-symbols-outlined {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: rgb(0, 0, 0);
 }
 
 .current-city {
-  font-size: 38px;
+  font-size: 2.375rem;
   font-weight: 900;
-  line-height: 48px;
-  margin: 0;
+  line-height: 3rem;
   color: #321313;
 }
 
@@ -71,7 +70,7 @@ h1 {
 main {
   display: block;
   position: relative;
-  bottom: 60px;
+  bottom: 3.75rem;
 }
 
 .middle-layout {
@@ -86,17 +85,22 @@ main {
 
 .middle-layout li {
   margin: 10px;
-  width: calc(50% - 20px);
+  width: calc(50% - 1.25rem);
   box-sizing: border-box;
 }
 
 .weather-app-page {
   padding: 30px;
-  max-height: 525px;
+  max-height: 32.8125rem;
   background: #f9f5f0;
   border: none;
   border-radius: 12px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .current-day-time {
@@ -108,18 +112,18 @@ main {
 }
 
 .current-day-time .day {
-  font-size: 45px;
+  font-size: 2.8125rem;
   font-family: "Space Mono", monospace;
 }
 
 .current-day-time .time {
-  font-size: 55px;
+  font-size: 3.4375rem;
   font-family: "VT323", monospace;
 }
 .current-day-time .day,
 .current-day-time .time {
   font-weight: bold;
-  margin: 10px 15px 10px 15px;
+  margin: 10px 15px;
   color: red;
 }
 
@@ -265,44 +269,22 @@ footer a:hover {
   color: #ff6d3f;
 }
 
-@media screen and (max-width: 768px) {
-  .current-details {
-    font-size: 12px;
-  }
-
+@media screen and (max-width: 980px) {
   .weather-app-page {
-    padding: 15px;
+    max-width: calc(100% - 15px);
+    padding: 20px;
   }
 
   .current-day-time {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 8px;
+    padding-bottom: 20px;
   }
 
-  .current-day-time .day,
+  .current-day-time .day {
+    font-size: 2rem;
+  }
+
   .current-day-time .time {
-    font-size: 10px;
-    margin: 5px 8px 5px 8px;
-  }
-
-  .current-temperature-icon {
-    font-size: 20px;
-    position: relative;
-    top: 6px;
-    right: -5px;
-  }
-
-  .current-temperature-value {
-    font-size: 44px;
-    margin-left: 10px;
-  }
-
-  .current-temperature-unit {
-    font-size: 15px;
-    position: relative;
-    top: 14px;
-    right: 0px;
+    font-size: 2.5rem;
   }
 }
 
