@@ -24,18 +24,18 @@ body {
 h1 {
   text-align: center;
   position: relative;
-  top: -5.9375rem;
+  top: -95px;
 }
 
 .material-symbols-outlined {
-  font-size: 1.875rem;
+  font-size: 30px;
   color: rgb(0, 0, 0);
 }
 
 .current-city {
-  font-size: 2.375rem;
+  font-size: 38px;
   font-weight: 900;
-  line-height: 3rem;
+  line-height: 48px;
   color: #321313;
 }
 
@@ -70,7 +70,7 @@ h1 {
 main {
   display: block;
   position: relative;
-  bottom: 3.75rem;
+  bottom: 60px;
 }
 
 .middle-layout {
@@ -85,22 +85,17 @@ main {
 
 .middle-layout li {
   margin: 10px;
-  width: calc(50% - 1.25rem);
+  width: calc(50% - 20px);
   box-sizing: border-box;
 }
 
 .weather-app-page {
   padding: 30px;
-  max-height: 32.8125rem;
+  max-height: 525px;
   background: #f9f5f0;
   border: none;
   border-radius: 12px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 920px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .current-day-time {
@@ -112,12 +107,12 @@ main {
 }
 
 .current-day-time .day {
-  font-size: 2.8125rem;
+  font-size: 45px;
   font-family: "Space Mono", monospace;
 }
 
 .current-day-time .time {
-  font-size: 3.4375rem;
+  font-size: 55px;
   font-family: "VT323", monospace;
 }
 .current-day-time .day,
@@ -243,7 +238,6 @@ main {
 }
 
 .weather-forecast-icon {
-  font-size: 40px;
   position: relative;
   left: 45px;
 }
@@ -269,22 +263,92 @@ footer a:hover {
   color: #ff6d3f;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 768px) {
   .weather-app-page {
-    max-width: calc(100% - 15px);
-    padding: 20px;
+    padding: 18px;
+    box-sizing: border-box;
+    max-height: 320px;
   }
-
   .current-day-time {
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
   }
 
   .current-day-time .day {
-    font-size: 2rem;
+    font-size: 25px;
   }
 
   .current-day-time .time {
-    font-size: 2.5rem;
+    font-size: 35px;
+  }
+
+  .current-day-time .day,
+  .current-day-time .time {
+    margin: 5px 8px;
+  }
+
+  .current-weather {
+    padding-top: 10px;
+  }
+
+  .current-temperature-value {
+    font-size: 125px;
+    width: 125px;
+  }
+
+  .current-temperature-icon img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .current-temperature-unit {
+    font-size: 15px;
+    position: relative;
+    top: -118px;
+    right: -105px;
+    color: #321313;
+  }
+
+  .current-details {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 5px 10px 15px 20px;
+    bottom: 38px;
+  }
+
+  .weather-forecast-page {
+    padding: 15px;
+  }
+
+  .weather-forecast {
+    text-align: center;
+    margin: 5px;
+  }
+
+  .weather-forecast-day {
+    margin: 5px;
+    padding: 2px;
+  }
+
+  .weather-forecast-date {
+    font-size: 13px;
+    left: 18px;
+  }
+
+  .weather-forecast-temperatures {
+    font-size: 10px;
+    left: 65px;
+  }
+
+  .weather-forecast-icon {
+    left: 5px;
+  }
+
+  footer {
+    font-size: 18px;
+    bottom: 267px;
+    right: 182px;
   }
 }
 
