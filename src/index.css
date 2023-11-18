@@ -267,7 +267,7 @@ footer a:hover {
   .weather-app-page {
     padding: 18px;
     box-sizing: border-box;
-    max-height: 320px;
+    max-height: 230px;
   }
   .current-day-time {
     display: flex;
@@ -276,11 +276,11 @@ footer a:hover {
   }
 
   .current-day-time .day {
-    font-size: 25px;
+    font-size: 15px;
   }
 
   .current-day-time .time {
-    font-size: 35px;
+    font-size: 25px;
   }
 
   .current-day-time .day,
@@ -293,62 +293,64 @@ footer a:hover {
   }
 
   .current-temperature-value {
-    font-size: 125px;
+    font-size: 100px;
     width: 125px;
   }
 
   .current-temperature-icon img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
   }
 
   .current-temperature-unit {
-    font-size: 15px;
+    font-size: 10px;
     position: relative;
-    top: -118px;
-    right: -105px;
+    top: -82px;
+    right: -76px;
     color: #321313;
   }
 
   .current-details {
-    font-size: 15px;
-    line-height: 25px;
-    padding: 5px 10px 15px 20px;
-    bottom: 38px;
+    font-size: 8px;
+    line-height: 15px;
+    padding: 5px 10px 15px 10px;
+    bottom: 23px;
   }
 
   .weather-forecast-page {
-    padding: 15px;
+    padding: 8px;
   }
 
   .weather-forecast {
     text-align: center;
-    margin: 5px;
+    margin: 2px;
   }
 
   .weather-forecast-day {
-    margin: 5px;
-    padding: 2px;
+    margin: 3px;
+    padding: 1px;
   }
 
   .weather-forecast-date {
-    font-size: 13px;
-    left: 18px;
+    font-size: 8px;
+    left: 15px;
   }
 
   .weather-forecast-temperatures {
-    font-size: 10px;
-    left: 65px;
+    font-size: 5px;
+    left: 50px;
   }
 
   .weather-forecast-icon {
-    left: 5px;
+    left: -5px;
+    max-width: 50px;
+    align-self: center;
   }
 
   footer {
-    font-size: 18px;
-    bottom: 267px;
-    right: 182px;
+    font-size: 10px;
+    bottom: 150px;
+    right: 110px;
   }
 }
 
