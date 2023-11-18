@@ -154,4 +154,4 @@ currentTimeELement.innerHTML = formatTime(currentTime);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearch);
 
-search("New York");
+search("Tokyo");
