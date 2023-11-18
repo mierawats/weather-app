@@ -113,6 +113,13 @@ main {
   border-bottom: 1px solid black;
 }
 
+.current-day-time .day,
+.current-day-time .time {
+  font-weight: bold;
+  margin: 10px 15px;
+  color: #0b1a2d;
+}
+
 .current-day-time .day {
   font-size: 45px;
   font-family: "Space Mono", monospace;
@@ -121,12 +128,6 @@ main {
 .current-day-time .time {
   font-size: 55px;
   font-family: "VT323", monospace;
-}
-.current-day-time .day,
-.current-day-time .time {
-  font-weight: bold;
-  margin: 10px 15px;
-  color: #0b1a2d;
 }
 
 .current-weather {
@@ -290,17 +291,17 @@ footer a:hover {
     padding-bottom: 8px;
   }
 
+  .current-day-time .day,
+  .current-day-time .time {
+    margin: 5px 8px;
+  }
+
   .current-day-time .day {
     font-size: 15px;
   }
 
   .current-day-time .time {
     font-size: 25px;
-  }
-
-  .current-day-time .day,
-  .current-day-time .time {
-    margin: 5px 8px;
   }
 
   .current-weather {
