@@ -1,44 +1,6 @@
 body {
-  background-color: #f2ead3;
   font-family: "Roboto", sans-serif;
-}
-
-.layout {
-  display: block;
-  margin: 0 auto;
-  max-width: 2000px;
-  max-height: 950px;
-}
-
-main {
-  display: block;
-  position: relative;
-  bottom: 60px;
-}
-
-.middle-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  list-style: none;
-  max-width: 100%;
-  flex-wrap: wrap;
-  padding-inline-start: 0;
-}
-
-.middle-layout li {
-  width: calc(50% - 20px);
-  margin: 10px;
-  box-sizing: border-box;
-}
-
-.weather-app-page {
-  max-height: 525px;
-  padding: 30px;
-  background: #f9f5f0;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  background-color: #f2ead3;
 }
 
 .decoration {
@@ -48,26 +10,33 @@ main {
 
 #dots-left,
 #dots-right {
-  color: rgb(234, 4, 4);
   font-size: 100px;
+  color: rgb(234, 4, 4);
+}
+
+.layout {
+  display: block;
+  margin: 0 auto;
+  max-width: 2000px;
+  max-height: 950px;
 }
 
 h1 {
+  text-align: center;
   position: relative;
   top: -95px;
-  text-align: center;
 }
 
 .material-symbols-outlined {
-  color: rgb(0, 0, 0);
   font-size: 30px;
+  color: rgb(0, 0, 0);
 }
 
 .current-city {
-  margin: 0;
   font-size: 38px;
   font-weight: 900;
   line-height: 48px;
+  margin: 0;
   color: #321313;
 }
 
@@ -80,23 +49,78 @@ h1 {
 }
 
 .search-input {
-  width: 800px;
-  padding: 0 35px;
   font-size: 16px;
+  padding: 0 35px;
+  width: 800px;
   background: #f9f7fe;
   border: none;
   border-radius: 35px;
 }
 
 .search-button {
+  font-size: 16px;
   margin-left: 10px;
   padding: 10px 20px;
-  font-size: 16px;
   color: #feeeff;
   background: #321313;
   border: none;
   border-radius: 35px;
   cursor: pointer;
+}
+
+main {
+  display: block;
+  position: relative;
+  bottom: 60px;
+}
+
+.middle-layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-inline-start: 0;
+  max-width: 100%;
+  list-style: none;
+}
+
+.middle-layout li {
+  margin: 10px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.weather-app-page {
+  padding: 30px;
+  max-height: 525px;
+  background: #f9f5f0;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+
+.current-day-time {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.current-day-time .day {
+  font-size: 45px;
+  font-family: "Space Mono", monospace;
+}
+
+.current-day-time .time {
+  font-size: 55px;
+  font-family: "VT323", monospace;
+}
+.current-day-time .day,
+.current-day-time .time {
+  font-weight: bold;
+  margin: 10px 15px 10px 15px;
+  color: red;
 }
 
 .current-weather {
@@ -107,6 +131,14 @@ h1 {
   display: flex;
   justify-content: space-between;
   color: #321313;
+}
+
+.current-temperature-value {
+  font-family: "VT323", monospace;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  width: 250px;
 }
 
 .current-temperature-icon {
@@ -122,14 +154,6 @@ h1 {
   height: 300px;
 }
 
-.current-temperature-value {
-  font-family: "VT323", monospace;
-  text-align: center;
-  width: 250px;
-  align-self: center;
-  font-weight: bold;
-}
-
 .current-temperature-unit {
   font-size: 30px;
   font-weight: bold;
@@ -142,43 +166,19 @@ h1 {
 .current-details {
   display: flex;
   justify-content: space-around;
-  padding: 10px 40px 30px 40px;
   font-size: 25px;
   font-weight: 450;
   line-height: 45px;
-  color: rgba(39, 33, 66, 0.5);
+  text-align: center;
+  padding: 10px 40px 30px 40px;
   position: relative;
   bottom: 80px;
-  text-align: center;
+  color: rgba(39, 33, 66, 0.5);
   border-bottom: 1px solid rgba(50, 19, 19, 0.1);
 }
 
 .current-details strong {
   color: #ff6d3f;
-}
-
-.current-day-time {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-  padding-bottom: 30px;
-  align-items: center;
-}
-
-.current-day-time .day {
-  font-family: "Space Mono", monospace;
-  font-size: 45px;
-}
-
-.current-day-time .time {
-  font-family: "VT323", monospace;
-  font-size: 55px;
-}
-.current-day-time .day,
-.current-day-time .time {
-  color: red;
-  font-weight: bold;
-  margin: 10px 15px 10px 15px;
 }
 
 .weather-forecast-page {
@@ -189,50 +189,44 @@ h1 {
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
 
+.weather-forecast {
+  text-align: center;
+  margin: 10px;
+}
+
 .weather-forecast-day {
-  align-items: center;
-  justify-content: center;
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
+  justify-content: center;
+  margin: 10px;
+  padding: 15px;
   gap: 10px;
+  align-items: center;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 15px;
-  margin: 10px;
-}
-
-.weather-forecast {
-  margin: 10px;
-  text-align: center;
 }
 
 .weather-forecast-date {
+  font-size: 25px;
   font-weight: 500;
-  align-items: center;
   text-align: left;
+  align-items: center;
   position: relative;
   left: 28px;
-  font-size: 25px;
-  opacity: 0.5;
   color: #321313;
-}
-
-.weather-forecast-icon {
-  position: relative;
-  left: 45px;
-  font-size: 40px;
+  opacity: 0.5;
 }
 
 .weather-forecast-temperatures {
-  font-weight: 500;
-  position: relative;
-  left: 275px;
-  align-items: flex-start;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   font-size: 16px;
+  font-weight: 500;
+  align-items: flex-start;
+  position: relative;
+  left: 275px;
   color: #321313;
 }
 
@@ -244,12 +238,18 @@ h1 {
   opacity: 0.5;
 }
 
+.weather-forecast-icon {
+  font-size: 40px;
+  position: relative;
+  left: 45px;
+}
+
 footer {
+  font-size: 35px;
   text-align: center;
   position: relative;
   bottom: 245px;
   right: 375px;
-  font-size: 35px;
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -267,8 +267,7 @@ footer a:hover {
 
 @media screen and (max-width: 768px) {
   .current-details {
-    font-size: 12px; /* Adjust font size */
-    /* Add other responsive styles as needed */
+    font-size: 12px;
   }
 
   .weather-app-page {
@@ -305,19 +304,10 @@ footer a:hover {
     top: 14px;
     right: 0px;
   }
-
-  /* Include similar adjustments for other elements */
 }
 
-/* For larger screens */
 @media screen and (min-width: 769px) {
-  /* Default or larger font size for larger screens */
-  /* Add other responsive styles as needed */
-
   .current-temperature-value {
-    font-size: 250px; /* Default or larger font size for larger screens */
-    /* Add other responsive styles as needed */
+    font-size: 250px;
   }
-
-  /* Include similar adjustments for other elements */
 }
